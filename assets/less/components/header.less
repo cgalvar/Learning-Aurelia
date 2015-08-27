@@ -1,0 +1,47 @@
+@color : white;
+#header{
+	background: rgb(113, 173, 215);
+	box-shadow: 0 0 8px;
+	padding-left: 10px;
+	display: flex;
+	height: 50px;
+	justify-content: space-between;
+	align-items: center;
+	font-family: monospace;
+	#logo{
+		font-size: 25px;
+		color: @color;
+	}
+	a{
+		text-decoration: none;
+		color: white;
+		padding: 5px;
+		border: 1px solid transparent;
+		transition: .5s all;
+		&:hover{
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			background-color: rgba(0, 0, 0, 0.06);
+		}
+	}
+	figure{
+		display: inline-block;
+	}
+	img{
+	  	width: 50px;
+		height: 50px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+
+	#user-options{
+		> div{
+			display: inline-block;
+		}
+		a{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+}

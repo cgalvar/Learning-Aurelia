@@ -1,0 +1,70 @@
+<template>
+
+<require from='./card-select'></require>
+
+<div id='form-upload-curso'>
+	<form>
+		<div>
+			<div>
+				<hgroup>
+					<h1>Curso</h1>
+				</hgroup>
+				<div class="form-group">
+					<label>Nombre</label>
+					<input type="text">
+				</div>
+			</div>
+			<div>
+				<label for=""></label>
+			</div>
+		</div>
+		<div>
+			<div class="center">
+				<hgroup>
+					<h2>Capitulo</h2>
+				</hgroup>
+				<div class="btn-group">
+					<i>+</i>
+					<i click.trigger = '$parent.anterior($index)' class="material-icons">keyboard_arrow_left</i>
+					<i click.trigger = '$parent.siguiente($index)' class="material-icons">keyboard_arrow_right</i>
+				</div>
+			</div>
+			<div repeat.for = 'capitulo of curso.capitulos' show.bind = 'capitulo.index == $parent.indexChapter'>
+				<div>
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text">
+					</div>
+				</div>
+				<hgroup>
+					<h2>
+						Clase 
+					</h2>
+				</hgroup>
+				<div class="btn-group">
+					<i>+</i>
+					<i click.trigger = '$parent.anterior($index)' class="material-icons">keyboard_arrow_left</i>
+					<i click.trigger = '$parent.siguiente($index)' class="material-icons">keyboard_arrow_right</i>
+				</div>
+				<div repeat.for='clase of capitulo.clases' show.bind= 'clase.index == $parent.$parent.indexClass'>
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" value.bind = 'clase.nombre'>
+					</div>
+				</div>
+				
+				<button click.trigger = '$parent.addClass($index)'>Agregar Clase</button>
+			</div>
+
+			<div id='video'>
+				<div repeat.for='video of youtube.videos'>
+			
+					<card-select title.bind="video.title"  img.bind='video.thumbnailsUrl'><card-select>
+				
+				</div>
+			</div>
+
+		</div>
+	</form>
+</div>
+</template>

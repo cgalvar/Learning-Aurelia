@@ -1,0 +1,23 @@
+<template>
+	<header id='header'>
+		<div id='logo'>OpenAcademy</div>
+		<div if.bind = '!user.isAuthenticated'>
+			<a href="#" click.trigger = 'showLogin()'>Login</a>
+			<a href="#" click.trigger = 'showRegister()'>Register</a>
+		</div>
+
+		<div id='user-options' if.bind='user.isAuthenticated'>
+			<a href="#curso/create">Crea un curso</a>
+			<a href="">cursos</a>
+			<a href="">dashboard</a>
+			<div>
+				<a href=""><i class="material-icons">message</i></a>
+				<a href=""><i class="material-icons">notifications</i></a>
+			</div>
+			<figure>
+				<img src.bind = 'user.picture_url'>
+			</figure>
+		</div>
+
+	</header>
+</template>

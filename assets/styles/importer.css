@@ -1,0 +1,219 @@
+/**
+ * importer.less
+ *
+ * By default, new Sails projects are configured to compile this file
+ * from LESS to CSS.  Unlike CSS files, LESS files are not compiled and
+ * included automatically unless they are imported below.
+ *
+ * The LESS files imported below are compiled and included in the order
+ * they are listed.  Mixins, variables, etc. should be imported first
+ * so that they can be accessed by subsequent LESS stylesheets.
+ *
+ * (Just like the rest of the asset pipeline bundled in Sails, you can
+ * always omit, customize, or replace this behavior with SASS, SCSS,
+ * or any other Grunt tasks you like.)
+ */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+h1 {
+  font-size: 3rem;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+#header {
+  background: #71add7;
+  box-shadow: 0 0 8px;
+  padding-left: 10px;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: monospace;
+}
+#header #logo {
+  font-size: 25px;
+  color: white;
+}
+#header a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  border: 1px solid transparent;
+  transition: .5s all;
+}
+#header a:hover {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.06);
+}
+#header figure {
+  display: inline-block;
+}
+#header img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#header #user-options > div {
+  display: inline-block;
+}
+#header #user-options a {
+  display: inline-block;
+  vertical-align: middle;
+}
+#login {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.22);
+}
+#login > div {
+  margin: auto;
+  transition: .2s all;
+}
+#login > div hgroup {
+  margin: 0 1rem 1rem 1rem;
+}
+#login > div > div {
+  justify-content: space-around;
+  display: flex;
+}
+#login > div > div span {
+  color: white;
+  width: 50px;
+  display: inline-flex;
+  height: 50px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 3em;
+  font-weight: bolder;
+  box-shadow: 0 0 3px black;
+  transition: .2s all;
+  animation: init .4s;
+  cursor: pointer;
+}
+#login > div > div span#f {
+  background-color: #3b5998;
+}
+#login > div > div span#t {
+  background-color: #659fcb;
+}
+#login > div > div span#g {
+  background-color: red;
+}
+#login > div > div span:hover {
+  box-shadow: 0 2px 3px black;
+}
+#login > div > div span:active {
+  box-shadow: 0 0 0;
+}
+@keyframes init {
+  from {
+    transform: translateY(-10%);
+    opacity: .5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#form-upload-curso {
+  width: 80%;
+  margin: 0 auto;
+}
+#form-upload-curso div.form-group {
+  margin: .3rem;
+}
+#form-upload-curso hgroup {
+  display: inline-block;
+  vertical-align: middle;
+}
+#form-upload-curso .btn-group {
+  display: inline-block;
+  vertical-align: middle;
+}
+#form-upload-curso .btn-group i {
+  background-color: #754e9a;
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-left: .5rem;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 3px black;
+}
+#form-upload-curso .btn-group i:hover {
+  box-shadow: 0 0 3px 1px black;
+}
+#form-upload-curso input {
+  width: 100%;
+  padding: .3rem;
+  border: 1px solid rgba(0, 0, 0, 0.26);
+  border-radius: .3rem;
+}
+#form-upload-curso div#video > div {
+  display: inline-block;
+  margin: .5rem;
+}
+#card-select {
+  display: inline-block;
+  width: 200px;
+  position: relative;
+  vertical-align: middle;
+}
+#card-select img {
+  width: 100%;
+}
+#card-select .selected {
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  margin: auto;
+  background: green;
+  top: 20%;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: .1s all;
+  box-shadow: 0 0 3px;
+}
+#card-select .selected i {
+  color: white;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-shadow: 0px 0px 20px black;
+}
+#card-select input {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+#card-select input:checked + .selected {
+  transform: scale(1);
+}

@@ -1,0 +1,10 @@
+<template>
+	
+	<require from="./components/nav-menu"></require>
+    <require from="login"></require>
+    <nav-menu login.bind = "login"></nav-menu>
+	<login login.ref = 'login'></login>
+	
+	<router-view login.bind = "login"></router-view>
+	
+</template>

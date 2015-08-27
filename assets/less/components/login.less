@@ -1,0 +1,70 @@
+#login{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	background-color: rgba(0, 0, 0, 0.22);
+
+	> div{
+		margin: auto;
+		transition: .2s all;
+
+		hgroup{
+		 	margin: 0 1rem 1rem 1rem;
+		}
+
+		//animation: initdiv .2s;
+		> div{
+			justify-content: space-around;
+			display: flex;
+			span{
+				color: white;
+				width: 50px;
+				display: inline-flex;
+				height: 50px;
+				border-radius: 50%;
+				justify-content: center;
+				align-items: center;
+				padding: 15px;
+				font-size: 3em;
+				font-weight: bolder;
+				box-shadow: 0 0 3px black;
+				transition: .2s all;
+				animation: init .4s;
+				cursor: pointer;
+				&#f{
+			  		background-color: rgb(59, 89, 152);					
+				}
+				&#t{
+					background-color: rgb(101, 159, 203);
+				}
+				&#g{
+					background-color: red;
+				}
+
+				&:hover{
+					box-shadow: 0 2px 3px black;
+				}
+				&:active{
+					box-shadow: 0 0 0;
+				}
+
+			}
+		}
+
+	}
+
+}
+
+@keyframes init{
+	from {
+		transform: translateY(-10%);
+		opacity: .5;
+	}
+    to {
+    	transform: translateY(0);
+		opacity: 1;
+    }
+}

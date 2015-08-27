@@ -1,0 +1,62 @@
+.btn-circular(){
+	display: inline-flex;
+	vertical-align: middle;
+	justify-content: center;	
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 0 3px black;
+	&:hover{
+		box-shadow: 0 0 3px 1px black;
+	}
+
+}
+
+#form-upload-curso{
+	width: 80%;
+	margin: 0 auto;	
+	
+	div.form-group{
+		margin: .3rem;
+	}
+	
+	hgroup{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.btn-group{
+		display: inline-block;
+		vertical-align: middle;
+
+		i{
+			background-color: @bgAdd;
+			color: white;
+			font-size: 2rem;
+			font-weight: bolder;
+			
+			font-weight: bolder;
+			margin-left: .5rem;
+			width: 30px;
+			height: 30px;
+			.btn-circular;
+		}
+
+	}
+
+	input{
+		width: 100%;
+		padding: .3rem;
+		border: 1px solid rgba(0, 0, 0, 0.26);
+  		border-radius: .3rem;
+	}
+
+	
+	div#video{
+		> div{
+			display: inline-block;
+			margin: .5rem;
+		}
+	}
+
+}

@@ -1,0 +1,16 @@
+<template>
+	
+	<div id='login' show.bind = 'showView' click.trigger = 'close($event)'>
+		<div>
+			<hgroup>
+				<h1>Login with</h1>
+			</hgroup>
+			<div>
+				<span id='f' click.delegate = 'authenticate("facebook")'>f</span>
+				<span id='t' click.trigger = 'authenticate("twitter")'>t</span>
+				<span id='g' click.trigger = 'authenticate("google")'>g</span>
+			</div>
+		</div>
+	</div>
+	
+</template>
